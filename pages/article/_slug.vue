@@ -84,7 +84,7 @@ export default Vue.extend({
           hid: 'twitter:image',
           property: 'twitter:image',
           name: 'twitter:image',
-          content: `/assets/articles/${this.$data.article.slug}.jpg`
+          content: `https://blog.emirkabal.com/assets/articles/${this.$data.article.slug}.jpg`
         },
         {
           hid: 'twitter:url',

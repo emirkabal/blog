@@ -16,6 +16,7 @@ const head: NuxtOptionsHead = {
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { hid: "description", name: "description", content: desc },
     {
+      hid: "og:description",
       name: "og:description",
       property: "og:description",
       content: desc,
@@ -27,11 +28,13 @@ const head: NuxtOptionsHead = {
       content: "website",
     },
     {
+      hid: "og:site_name",
       name: "og:site_name",
       property: "og:site_name",
       content: "blog.emirkabal.com",
     },
     {
+      hid: "og:image",
       name: "og:image",
       property: "og:image",
       content: "/logo.png",
@@ -41,30 +44,37 @@ const head: NuxtOptionsHead = {
       content: "#3892d0",
     },
     {
+      hid: "twitter:card",
       property: "twitter:card",
       name: "twitter:card",
       content: "summary",
     },
     {
+      hid: "twitter:site",
       property: "twitter:site",
       name: "twitter:site",
       content: "@emirkabal",
     },
     {
+      hid: "twitter:creator",
       property: "twitter:creator",
       name: "twitter:creator",
       content: "@emirkabal",
     },
     {
+      hid: "twitter:title",
+      property: "twitter:title",
       name: "twitter:title",
       content: "Emir Kabal Blog",
     },
     {
+      hid: "twitter:description",
       property: "twitter:description",
       name: "twitter:description",
       content: desc,
     },
     {
+      hid: "twitter:image",
       property: "twitter:image",
       name: "twitter:image",
       content: "/logo.png",
@@ -99,7 +109,8 @@ export default {
   components: true,
   buildModules: [
     "nuxt-vite",
-    ["@nuxt/typescript-build", { typeCheck: false, ignoreNotFoundWarnings: true }]
+    ["@nuxt/typescript-build", { typeCheck: false, ignoreNotFoundWarnings: true }],
+    "@nuxtjs/google-analytics"
   ],
   modules: [
     "@nuxt/content",
@@ -111,6 +122,9 @@ export default {
     experimentWarning: false
   },
   sitemap,
+  googleAnalytics: {
+    id: "UA-144173986-4"
+  },
   content: {
     liveEdit: false,
     markdown: {

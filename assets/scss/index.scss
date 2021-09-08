@@ -340,7 +340,7 @@ img {
       border-radius: 10px;
       width: calc(50% - 7px);
       transition: all 190ms ease-in-out;
-      border: 1px solid rgba(black, .05);
+      border: 1px solid rgba(black, .1);
 
       &:hover {
         cursor: pointer;
@@ -479,7 +479,7 @@ img {
         margin: auto;
         margin-bottom: 8px;
         transition: all 190ms ease-in-out;
-        border: 1px solid rgba(black, .05);
+        border: 1px solid rgba(black, .1);
         @media screen and (max-width: 768px) {
           margin-right: 0;
           margin-bottom: 12px;
