@@ -6,6 +6,7 @@ You can check out this website at [blog.emirkabal.com](https://blog.emirkabal.co
 
 ## Technologies I use in this repo:
 - [Nuxt.js](https://nuxtjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 - [@nuxtjs/content](https://content.nuxtjs.org/)
 - [moment.js](https://momentjs.com/)
 - [vue-disqus](https://github.com/ktquez/vue-disqus)
