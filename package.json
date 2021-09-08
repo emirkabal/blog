@@ -31,7 +31,7 @@
     "eslint-plugin-vue": "^7.12.1",
     "nuxt-vite": "^0.2.2",
     "prettier": "^2.3.2",
-    "sass-loader": "10.1.1"
+    "sass-loader": "12.1.0"
   },
   "resolutions": {
     "vite": "2.3.8"
