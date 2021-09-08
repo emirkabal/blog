@@ -5,7 +5,7 @@ const desc = "Hello, I'm Emir Kabal and I'm a full-stack developer and making so
 const sitemap = {
   hostname: "https://blog.emirkabal.com",
   gzip: true,
-  routes: fs.readdirSync("./content/").map(file => `/posts/${file.replace(".md", "")}`),
+  routes: fs.readdirSync("./content/").map(file => `/article/${file.replace(".md", "")}`),
 }
 
 const head: NuxtOptionsHead = {

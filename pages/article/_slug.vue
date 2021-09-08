@@ -22,16 +22,20 @@
 import { IContentDocument } from "@nuxt/content/types/content"
 import Vue from 'vue'
 export default Vue.extend({
-  async asyncData({ $content, $moment, $calculateReadTime, params }) {
+  async asyncData({ $content, $moment, $calculateReadTime, params, error }) {
+    try {
+      const slug: string = params.slug
+      const article = (await $content(slug)
+        .fetch()) as IContentDocument
 
-    const slug: string = params.slug
-    const article = (await $content(slug)
-      .fetch()) as IContentDocument
 
-    return {
-      article,
-      date: $moment(article.createdAt).format('lll'),
-      readingTime: $calculateReadTime(JSON.stringify(article.body))
+      return {
+        article,
+        date: $moment(article.createdAt).format('lll'),
+        readingTime: $calculateReadTime(JSON.stringify(article.body))
+      }
+    } catch (err) {
+      error({ statusCode: 404, message: 'Article not found' });
     }
   },
   head() {
