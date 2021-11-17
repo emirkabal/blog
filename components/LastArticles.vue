@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="fw-300">Son Gönderiler</h2>
+    <h2>Son Gönderiler</h2>
     <div class="last-articles">
       <nuxt-link v-for="article in articles" :key="article.slug" :to="`/article/${article.slug}`" class="card">
         <div class="card-image">
@@ -10,7 +10,7 @@
           <h3>
             {{ article.title }}
           </h3>
-          <p class="fw-300">
+          <p>
             {{  article.description }}
           </p>
         </div>

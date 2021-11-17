@@ -3,7 +3,7 @@
     <LastArticles :articles="lastArticles" />
     <Tags v-if="screenWidth <= 768" :tags="tags" />
     <div class="my-flex">
-      <h2 class="fw-300">Gönderiler</h2>
+      <h2>Gönderiler</h2>
       <Articles :articles="articles" :page="page" :pages="pages" :per-page="perPage" />
       <Tags v-if="screenWidth > 768" :tags="tags" />
     </div>
@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { IContentDocument } from "@nuxt/content/types/content"
+import { IContentDocument } from '@nuxt/content/types/content'
 import LastArticles from '@/components/LastArticles.vue'
 import Articles from '@/components/Articles.vue'
 const perPage = 5
@@ -66,8 +66,12 @@ export default Vue.extend({
   },
   data() {
     return {
+      lastArticles: [] as IContentDocument[],
       articles: [] as IContentDocument[],
+      tags: [] as { name: string, count: number }[],
       articlesForPagination: [] as IContentDocument[],
+      pages: Number,
+      perPage: Number,
       page: 0,
       screenWidth: process.client ? window.innerWidth : 0
     }

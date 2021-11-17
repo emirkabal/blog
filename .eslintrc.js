@@ -11,6 +11,8 @@ module.exports = {
   ],
   plugins: [],
   rules: {
-    'no-use-before-define': 'off'
+    'no-use-before-define': 'off',
+    'vue/no-dupe-keys': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }
