@@ -1,4 +1,4 @@
-##### This website is Turkish only, maybe i can add language option in the future.
+##### This website is Turkish only, maybe I can add language option in the future.
 #  Welcome to my personal blog source-code!
 You can fork and edit and use it.
 >![Website](https://i.imgur.com/WlQPM3d.png)
