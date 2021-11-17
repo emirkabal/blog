@@ -28,7 +28,7 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "nuxt-vite": "^0.2.2",
     "prettier": "^2.4.1",
