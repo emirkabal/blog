@@ -1,11 +1,14 @@
 import fs from "fs"
 import { NuxtOptionsHead } from "@nuxt/types/config/head"
-const desc = "Hello, I'm Emir Kabal and I'm a full-stack developer and making some Node.js applications and websites."
+const desc =
+  "Hello, I'm Emir Kabal and I'm a full-stack developer and making some Node.js applications and websites."
 
 const sitemap = {
   hostname: "https://blog.emirkabal.com",
   gzip: true,
-  routes: fs.readdirSync("./content/").map(file => `/article/${file.replace(".md", "")}`),
+  routes: fs
+    .readdirSync("./content/")
+    .map((file) => `/article/${file.replace(".md", "")}`),
 }
 
 const head: NuxtOptionsHead = {
@@ -78,7 +81,7 @@ const head: NuxtOptionsHead = {
       property: "twitter:image",
       name: "twitter:image",
       content: "/logo.png",
-    }
+    },
   ],
   link: [
     { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -91,39 +94,37 @@ const head: NuxtOptionsHead = {
   ],
 }
 
-
 export default {
-  target: "server",
-  ssr: true,
+  target: "static",
+  generate: {
+    fallback: true,
+  },
   head,
-
-  css: [
-    "@/assets/scss/index.scss"
-  ],
+  css: ["@/assets/scss/index.scss"],
   plugins: [
     "@/plugins/disqus.ts",
     "@/plugins/calculateReadTime.ts",
-    "@/plugins/moment.ts"
+    "@/plugins/moment.ts",
   ],
 
   components: true,
   buildModules: [
     "nuxt-vite",
-    ["@nuxt/typescript-build", { typeCheck: false, ignoreNotFoundWarnings: true }],
-    "@nuxtjs/google-analytics"
+    [
+      "@nuxt/typescript-build",
+      { typeCheck: false, ignoreNotFoundWarnings: true },
+    ],
+    "@nuxtjs/google-analytics",
   ],
-  modules: [
-    "@nuxt/content",
-    "@nuxtjs/sitemap"
-  ],
+  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
 
   vite: {
     ssr: true,
-    experimentWarning: false
+    experimentWarning: false,
   },
   sitemap,
   googleAnalytics: {
-    id: "UA-144173986-4"
+    id: "UA-144173986-4",
   },
   content: {
     liveEdit: false,
@@ -141,5 +142,5 @@ export default {
         ],
       ],
     },
-  }
+  },
 }
