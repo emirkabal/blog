@@ -41,8 +41,8 @@ export default Vue.extend({
       ])
       .fetch()
 
-    const search = this.query?.q?.toString() || undefined
-    const tag = this.query?.tag?.toString() || undefined
+    const search = this.$route.query?.q?.toString() || undefined
+    const tag = this.$route.query?.tag?.toString() || undefined
 
     const articles: IContentDocument[] = allArticles
       .slice()
@@ -72,15 +72,10 @@ export default Vue.extend({
   watch: {
     $route(to) {
       if (to.query.q) this.search = to.query.q.trim()
-      if (to.query.tag) this.tag = to.query.tag.trim()
       this.filterArticles()
     },
   },
-  mounted() {
-    if (this.$route.query.q) this.search = this.$route.query.q.trim()
-    if (this.$route.query.tag) this.tag = this.$route.query.tag.trim()
-    this.filterArticles()
-  },
+
   methods: {
     filterArticles() {
       this.articles = this.$data.allArticles
