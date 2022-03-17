@@ -75,7 +75,11 @@ export default Vue.extend({
       this.filterArticles()
     },
   },
-
+  mounted() {
+    if (this.$route.query.q) this.search = this.$route.query.q.trim()
+    if (this.$route.query.tag) this.tag = this.$route.query.tag.trim()
+    this.filterArticles()
+  },
   methods: {
     filterArticles() {
       this.articles = this.$data.allArticles
