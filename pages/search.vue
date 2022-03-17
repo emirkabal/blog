@@ -71,7 +71,8 @@ export default Vue.extend({
 
   watch: {
     $route(to) {
-      this.search = to.query.q.trim()
+      if (to.query.q) this.search = to.query.q.trim()
+      if (to.query.tag) this.tag = to.query.tag.trim()
       this.filterArticles()
     },
   },
