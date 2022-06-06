@@ -16,7 +16,7 @@
     "core-js": "^3.19.1",
     "moment": "^2.29.1",
     "nuxt": "^2.15.7",
-    "sass": "^1.43.4",
+    "sass": "^1.52.2",
     "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
