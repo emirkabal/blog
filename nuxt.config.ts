@@ -125,9 +125,8 @@ export default {
         id: "ca-pub-4879579032863674",
         analyticsUacct: "UA-144173986-4",
         analyticsDomainName: "blog.emirkabal.com",
-        pageLevelAds: true,
-        onPageLoad: true,
-        overlayBottom: true,
+        pageLevelAds: false,
+        overlayBottom: false,
         tag: "adsbygoogle"
       }
     ]
