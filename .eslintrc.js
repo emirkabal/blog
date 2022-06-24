@@ -5,14 +5,15 @@ module.exports = {
     node: true
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended',
-    'prettier'
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:nuxt/recommended",
+    "prettier"
   ],
-  plugins: [],
+  plugins: ["prettier"],
   rules: {
-    'no-use-before-define': 'off',
-    'vue/no-dupe-keys': 'off',
-    'vue/multi-word-component-names': 'off'
+    "prettier/prettier": "error",
+    "no-use-before-define": "off",
+    "vue/no-dupe-keys": "off",
+    "vue/multi-word-component-names": "off"
   }
 }

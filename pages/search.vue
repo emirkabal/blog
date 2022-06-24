@@ -23,7 +23,7 @@ export default Vue.extend({
       allArticles: [] as IContentDocument[],
       articles: [] as IContentDocument[],
       search: "" as string,
-      tag: "" as string,
+      tag: "" as string
     }
   },
 
@@ -37,7 +37,7 @@ export default Vue.extend({
         "slug",
         "createdAt",
         "body",
-        "content",
+        "content"
       ])
       .fetch()
 
@@ -65,7 +65,7 @@ export default Vue.extend({
 
   head() {
     return {
-      title: `${this.$data.search || this.$data.tag} aramasından sonuçlar`,
+      title: `${this.$data.search || this.$data.tag} aramasından sonuçlar`
     }
   },
 
@@ -73,7 +73,7 @@ export default Vue.extend({
     $route(to) {
       if (to.query.q) this.search = to.query.q.trim()
       this.filterArticles()
-    },
+    }
   },
   mounted() {
     if (this.$route.query.q) this.search = this.$route.query.q.trim()
@@ -96,7 +96,7 @@ export default Vue.extend({
                 -1)
           )
         })
-    },
-  },
+    }
+  }
 })
 </script>

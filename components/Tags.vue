@@ -1,16 +1,20 @@
 <template>
   <div class="tags">
     <h3 class="fw-300">Etiketler</h3>
-    <hr>
+    <hr />
     <div class="tags__list">
-      <nuxt-link v-for="tag in tags" :key="tag.name" :to="`/search?tag=${tag.name}`">
+      <nuxt-link
+        v-for="tag in tags"
+        :key="tag.name"
+        :to="`/search?tag=${tag.name}`"
+      >
         #{{ tag.name }} <small>({{ tag.count }})</small>
       </nuxt-link>
     </div>
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue"
 interface Tag {
   name: string
   count: number

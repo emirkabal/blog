@@ -2,16 +2,26 @@
   <div>
     <h2>Son Gönderiler</h2>
     <div class="last-articles">
-      <nuxt-link v-for="article in articles" :key="article.slug" :to="`/article/${article.slug}`" class="card">
+      <nuxt-link
+        v-for="article in articles"
+        :key="article.slug"
+        :to="`/article/${article.slug}`"
+        class="card"
+      >
         <div class="card-image">
-          <img :src="`/assets/articles/${article.slug}.jpg`" loading="lazy" onerror="this.style.visibility='hidden'" :alt="article.title">
+          <img
+            :src="`/assets/articles/${article.slug}.jpg`"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+            :alt="article.title"
+          />
         </div>
         <div class="card-content">
           <h3>
             {{ article.title }}
           </h3>
           <p>
-            {{  article.description }}
+            {{ article.description }}
           </p>
         </div>
       </nuxt-link>
@@ -21,7 +31,7 @@
 
 <script lang="ts">
 import { IContentDocument } from "@nuxt/content/types/content"
-import Vue from 'vue'
+import Vue from "vue"
 export default Vue.extend({
   props: {
     articles: {

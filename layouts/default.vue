@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Header/>
+    <Header />
     <div class="container">
       <div class="content">
         <Nuxt />
       </div>
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>

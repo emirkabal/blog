@@ -1,11 +1,11 @@
-import { Plugin } from '@nuxt/types'
+import { Plugin } from "@nuxt/types"
 
-declare module 'vue/types/vue' {
+declare module "vue/types/vue" {
   interface Vue {
     $calculateReadTime(text: string): void
   }
 }
-declare module '@nuxt/types' {
+declare module "@nuxt/types" {
   interface NuxtAppOptions {
     $calculateReadTime(text: string): void
   }
@@ -14,16 +14,15 @@ declare module '@nuxt/types' {
   }
 }
 
-
 const calculateReadTime = (text: string) => {
   const wordsPerMinute = 200
-  const words = text.split(' ')
+  const words = text.split(" ")
   const minutes = Math.ceil(words.length / wordsPerMinute)
   return `${minutes} dakika`
 }
 
 const calculateReadTimePlugin: Plugin = (context, inject) => {
-  inject('calculateReadTime', calculateReadTime)
+  inject("calculateReadTime", calculateReadTime)
   context.$calculateReadTime = calculateReadTime
 }
 

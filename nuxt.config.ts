@@ -8,7 +8,7 @@ const sitemap = {
   gzip: true,
   routes: fs
     .readdirSync("./content/")
-    .map((file) => `/article/${file.replace(".md", "")}`),
+    .map((file) => `/article/${file.replace(".md", "")}`)
 }
 
 const head: NuxtOptionsHead = {
@@ -22,66 +22,66 @@ const head: NuxtOptionsHead = {
       hid: "og:description",
       name: "og:description",
       property: "og:description",
-      content: desc,
+      content: desc
     },
     {
       hid: "og:type",
       name: "og:type",
       property: "og:type",
-      content: "website",
+      content: "website"
     },
     {
       hid: "og:site_name",
       name: "og:site_name",
       property: "og:site_name",
-      content: "blog.emirkabal.com",
+      content: "blog.emirkabal.com"
     },
     {
       hid: "og:image",
       name: "og:image",
       property: "og:image",
-      content: "/logo.png",
+      content: "/logo.png"
     },
     {
       name: "theme-color",
-      content: "#3892d0",
+      content: "#3892d0"
     },
     {
       hid: "twitter:card",
       property: "twitter:card",
       name: "twitter:card",
-      content: "summary",
+      content: "summary"
     },
     {
       hid: "twitter:site",
       property: "twitter:site",
       name: "twitter:site",
-      content: "@emirkabal",
+      content: "@emirkabal"
     },
     {
       hid: "twitter:creator",
       property: "twitter:creator",
       name: "twitter:creator",
-      content: "@emirkabal",
+      content: "@emirkabal"
     },
     {
       hid: "twitter:title",
       property: "twitter:title",
       name: "twitter:title",
-      content: "Emir Kabal Blog",
+      content: "Emir Kabal Blog"
     },
     {
       hid: "twitter:description",
       property: "twitter:description",
       name: "twitter:description",
-      content: desc,
+      content: desc
     },
     {
       hid: "twitter:image",
       property: "twitter:image",
       name: "twitter:image",
-      content: "/logo.png",
-    },
+      content: "/logo.png"
+    }
   ],
   link: [
     { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -89,22 +89,22 @@ const head: NuxtOptionsHead = {
       rel: "search",
       type: "application/opensearchdescription+xml",
       title: "Emir Kabal Blog",
-      href: "https://blog.emirkabal.com/opensearch.xml",
-    },
-  ],
+      href: "https://blog.emirkabal.com/opensearch.xml"
+    }
+  ]
 }
 
 export default {
   target: "static",
   generate: {
-    fallback: true,
+    fallback: true
   },
   head,
   css: ["@/assets/scss/index.scss"],
   plugins: [
     "@/plugins/disqus.ts",
     "@/plugins/calculateReadTime.ts",
-    "@/plugins/moment.ts",
+    "@/plugins/moment.ts"
   ],
 
   components: true,
@@ -112,35 +112,35 @@ export default {
     "nuxt-vite",
     [
       "@nuxt/typescript-build",
-      { typeCheck: false, ignoreNotFoundWarnings: true },
+      { typeCheck: false, ignoreNotFoundWarnings: true }
     ],
-    "@nuxtjs/google-analytics",
+    "@nuxtjs/google-analytics"
   ],
   modules: ["@nuxt/content", "@nuxtjs/sitemap"],
 
   vite: {
     ssr: true,
-    experimentWarning: false,
+    experimentWarning: false
   },
   sitemap,
   googleAnalytics: {
-    id: "UA-144173986-4",
+    id: "UA-144173986-4"
   },
   content: {
     liveEdit: false,
     markdown: {
       remarkExternalLinks: {
         target: "_blank",
-        rel: "noreferrer noopener",
+        rel: "noreferrer noopener"
       },
       remarkPlugins: [
         [
           "remark-autolink-headings",
           {
-            behavior: "wrap",
-          },
-        ],
-      ],
-    },
-  },
+            behavior: "wrap"
+          }
+        ]
+      ]
+    }
+  }
 }

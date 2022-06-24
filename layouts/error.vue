@@ -2,15 +2,17 @@
   <div>
     <div class="notfound-2">
       <h3>404: Böyle bir sayfa bulunamadı.</h3>
-      <nuxt-link to="/" style="text-decoration: none;">Ana sayfaya geri dön.</nuxt-link>
+      <nuxt-link to="/" style="text-decoration: none"
+        >Ana sayfaya geri dön.</nuxt-link
+      >
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue"
 export default Vue.extend({
-  layout: 'blank',
+  layout: "blank",
   props: {
     error: {
       type: Object,
@@ -21,7 +23,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-
 .notfound-2 {
   display: flex;
   flex-direction: column;
@@ -29,8 +30,7 @@ export default Vue.extend({
   justify-content: center;
   height: 95vh;
   a:hover {
-    opacity: .4;
+    opacity: 0.4;
   }
 }
-
 </style>

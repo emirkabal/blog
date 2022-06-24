@@ -1,8 +1,8 @@
-declare module '@nuxt/content/types/content' {
+declare module "@nuxt/content/types/content" {
   interface IContentDocument {
     dir?: string
     path?: string
-    extension?: '.md' | '.json' | '.yaml' | '.xml' | '.csv' | string
+    extension?: ".md" | ".json" | ".yaml" | ".xml" | ".csv" | string
     slug?: string
     title?: string
     toc?: Toc[]

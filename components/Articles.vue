@@ -2,17 +2,26 @@
   <div>
     <div class="articles">
       <div class="articles-content">
-        <Article v-for="article in articles.slice(0, perPage)" :key="article.slug" :article="article"/>
+        <Article
+          v-for="article in articles.slice(0, perPage)"
+          :key="article.slug"
+          :article="article"
+        />
       </div>
     </div>
-    <div v-if="pages>1 && pages !== -1" ref="pagination" class="articles-pagination">
+    <div
+      v-if="pages > 1 && pages !== -1"
+      ref="pagination"
+      class="articles-pagination"
+    >
       <button
         v-for="i in pages"
-        :key="i" class="articles-pagination-item"
-        :class="page === i-1 && 'active'"
-        :disabled="page === i-1"
-        @click="changePage(i-1)
-      ">
+        :key="i"
+        class="articles-pagination-item"
+        :class="page === i - 1 && 'active'"
+        :disabled="page === i - 1"
+        @click="changePage(i - 1)"
+      >
         {{ i }}
       </button>
     </div>
@@ -21,7 +30,7 @@
 
 <script lang="ts">
 import { IContentDocument } from "@nuxt/content/types/content"
-import Vue from 'vue'
+import Vue from "vue"
 
 export default Vue.extend({
   props: {
@@ -47,16 +56,15 @@ export default Vue.extend({
   },
   methods: {
     changePage(page: number) {
-      this.$root.$emit('articles:changePage', page)
+      this.$root.$emit("articles:changePage", page)
       this.$nuxt.$nextTick(() => {
         const el = this.$refs.pagination as HTMLElement
         el.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start"
         })
       })
     }
   }
-
 })
 </script>
