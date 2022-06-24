@@ -123,8 +123,11 @@ export default {
       "@nuxtjs/google-adsense",
       {
         id: "ca-pub-4879579032863674",
-        onPageLoad: false,
-        pageLevelAds: false
+        analyticsUacct: "UA-144173986-4",
+        analyticsDomainName: "blog.emirkabal.com",
+        pageLevelAds: true,
+        overlayBottom: false,
+        tag: "adsbygoogle"
       }
     ]
   ],
