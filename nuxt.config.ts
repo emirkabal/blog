@@ -116,7 +116,18 @@ export default {
     ],
     "@nuxtjs/google-analytics"
   ],
-  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/sitemap",
+    [
+      "@nuxtjs/google-adsense",
+      {
+        id: "ca-pub-4879579032863674",
+        onPageLoad: false,
+        pageLevelAds: false
+      }
+    ]
+  ],
 
   vite: {
     ssr: true,
