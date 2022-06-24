@@ -19,7 +19,7 @@ Selman Kahya'nın da CTO olduğu [Vibely](https://vibely.io) herkesin katılabil
 
 ### Selman Kahya Kimdir?
 Selman Kahya, 1990 yılında Dünya'ya gelmiştir. Eğitim hayatına ise Fatih Üniversitesi ile başlayıp Salford Üniversitesi ve San Francisco Eyalet Üniversitesi'nden mezun olmuştur. Kendisi şu anda [Vibely](#vibely-nedir) üzerinde CTO olarak çalışmaktadır aynı zamanda daha önce [Uber](https://uber.com) ve [Yahoo](https://yahoo.com) gibi büyük firmalarda çalıştığı bilinmektedir. Selman Kahya'nın kendisi hakkında daha fazla bilgi paylaştığı video aşağıdadır.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kd8QUW2vQZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" class="video-frame" src="https://www.youtube.com/embed/kd8QUW2vQZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Lorem Ipsum Başlıkları
 Lorem Ipsum başlıklarının bu kadar fazla olmasının nedeni site içeriğinin biraz daha fazla gözükmesini sağlamaktır [yarışma](#neden-blog-a%C3%A7t%C4%B1m-ve-yar%C4%B1%C5%9Fma) sonlandıktan sonra hepsi kaldırılacaktır ve ilerleyen günlerde bu blog'un daha düzenli olduğunu görüntüleyeceksiniz.
