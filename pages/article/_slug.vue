@@ -33,8 +33,8 @@
       :ad-style="{
         display: 'inline-block',
         width: '100%',
-        height: '120px',
-        marginTop: '20px'
+        height: '140px',
+        marginTop: '10px'
       }"
     ></adsbygoogle>
     <div class="article-comments">

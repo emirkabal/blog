@@ -127,7 +127,7 @@ export default {
         analyticsDomainName: "blog.emirkabal.com",
         pageLevelAds: true,
         onPageLoad: true,
-        overlayBottom: false,
+        overlayBottom: true,
         tag: "adsbygoogle"
       }
     ]
