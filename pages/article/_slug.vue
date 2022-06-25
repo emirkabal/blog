@@ -13,6 +13,16 @@
       </div>
       <ArticleShareButtons v-if="screenWidth <= 768" :article="article" />
     </div>
+    <adsbygoogle
+      v-if="screenWidth < 768"
+      ad-format="static"
+      :ad-style="{
+        display: 'inline-block',
+        width: '100%',
+        height: '140px',
+        marginTop: '10px'
+      }"
+    ></adsbygoogle>
     <nuxt-content :document="article" />
     <div class="article-tags">
       <div class="article-tags-content">
@@ -29,6 +39,7 @@
       </div>
     </div>
     <adsbygoogle
+      v-if="screenWidth >= 768"
       ad-format="static"
       :ad-style="{
         display: 'inline-block',
