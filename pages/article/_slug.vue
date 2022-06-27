@@ -14,12 +14,13 @@
       <ArticleShareButtons v-if="screenWidth <= 768" :article="article" />
     </div>
     <adsbygoogle
-      v-if="screenWidth < 768"
+      v-if="screenWidth < 768 && showAds"
       ad-format="static"
       :ad-style="{
         display: 'inline-block',
         width: '100%',
         height: '140px',
+        marginTop: '10px',
         marginTop: '10px'
       }"
     ></adsbygoogle>
@@ -39,7 +40,7 @@
       </div>
     </div>
     <adsbygoogle
-      v-if="screenWidth >= 768"
+      v-if="screenWidth >= 768 && showAds"
       ad-format="static"
       :ad-style="{
         display: 'inline-block',
@@ -67,7 +68,7 @@ export default Vue.extend({
         article,
         date: $moment(article.createdAt).format("lll"),
         readingTime: $calculateReadTime(JSON.stringify(article.body)),
-        screenWidth: 769
+        screenWidth: 768
       }
     } catch (err) {
       error({
@@ -78,7 +79,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      screenWidth: 769
+      screenWidth: 768,
+      showAds: false
     }
   },
   head() {
@@ -143,10 +145,18 @@ export default Vue.extend({
     }
   },
   beforeMount() {
-    window.addEventListener("resize", this.handleResize)
+    window.addEventListener("resize", () => {
+      this.handleResize()
+    })
   },
   mounted() {
     this.handleResize()
+    setTimeout(() => {
+      this.showAds = true
+    }, 1800)
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.handleResize)
   },
   methods: {
     handleResize() {

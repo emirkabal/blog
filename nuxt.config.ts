@@ -126,8 +126,7 @@ export default {
         analyticsUacct: "UA-144173986-4",
         analyticsDomainName: "blog.emirkabal.com",
         pageLevelAds: false,
-        overlayBottom: false,
-        tag: "adsbygoogle"
+        overlayBottom: false
       }
     ]
   ],
