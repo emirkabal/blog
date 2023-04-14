@@ -17,7 +17,11 @@ Masterscore, kullanıcılara sadece film ve dizi değerlendirmesi yapma imkanı 
 > Birkaç fotoğraf...
 
 ![homepage-view](https://dervis.emirkabal.com/screencapture-masterscore-emirkabal-2023-04-14-15_57_02.png)
+
 ![entertainment-view](https://dervis.emirkabal.com/screencapture-masterscore-emirkabal-details-movie-278-2023-04-14-16_30_11.png)
+
 ![review-view](https://dervis.emirkabal.com/review-view.png)
+
 ![feed-view](https://dervis.emirkabal.com/screencapture-masterscore-emirkabal-feed-2023-04-14-16_37_28.png)
+
 ![user-view](https://dervis.emirkabal.com/screencapture-masterscore-emirkabal-users-autnix-2023-04-14-16_32_47.png)
