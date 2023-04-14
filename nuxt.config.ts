@@ -133,7 +133,7 @@ export default {
 
   vite: {
     ssr: true,
-    experimentWarning: false
+    experimentWarning: false,
   },
   sitemap,
   googleAnalytics: {
@@ -155,5 +155,9 @@ export default {
         ]
       ]
     }
+  },
+
+  build: {
+    extractCSS: true,
   }
 }

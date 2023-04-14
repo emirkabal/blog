@@ -24,6 +24,8 @@ body {
   font-family: "Open Sans", sans-serif;
   scrollbar-color: var(--color-scroll) var(--color-secondary);
   scrollbar-width: thin;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .fw-300 {
@@ -339,8 +341,19 @@ img {
         }
       }
     }
+    blockquote {
+      border-left: 4px solid var(--color-secondary);
+      padding-left: 12px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+      p {
+        margin: 0;
+      }
+    }
     p {
-      opacity: 0.8;
+      color: rgba($color: #000000, $alpha: 0.8);
       letter-spacing: 0.5px;
     }
     img,
@@ -501,8 +514,8 @@ img {
   }
 
   .tags {
-    margin-left: 50px;
-    width: 40%;
+    margin-left: 30px;
+    width: 20%;
 
     .tags__list {
       @media screen and (min-width: 768px) {
@@ -557,8 +570,12 @@ img {
     }
   }
 
+  .articles-container {
+    width: 100%;
+  }
   .articles {
     display: flex;
+    width: 100%;
     margin-top: 48px;
     .articles-content {
       margin-top: 18px;
@@ -629,19 +646,15 @@ img {
           display: flex;
           margin: 0;
           padding: 0;
-          align-items: center;
-          .articles-content-item-content-info-space {
-            flex-grow: 2;
-          }
+          align-items: flex-end;
+          justify-content: flex-end;
           .articles-content-item-content-info-item {
             display: flex;
             margin-left: 8px;
             font-size: 0.8rem;
             transition: all 150ms ease;
             opacity: 0.6;
-            font-weight: 300;
             align-items: center;
-
             svg {
               margin-right: 4px;
               width: 14px;
